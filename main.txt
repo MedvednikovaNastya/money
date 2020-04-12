@@ -1,66 +1,15 @@
 #include <iostream>
+
 using namespace std;
 
-class Queue {
-private:
-    class Node {
-       public:
-            int value;
-            Node *prev, *next;
-
-            Node(int value) {
-                this->value = value;
-                prev = next = nullptr;
-            }
-
-    };
-    int size;
-    Node *head, *tail;
-
-public:
-    Queue() {
-        size = 0;
-        head = tail = NULL;
-    }
-    ~Queue() {
-    }
-    void push(int value) {
-        if(size > 0) {
-            tail->next = new Node(value);
-            tail = tail->next;
-        } else {
-            tail = head = new Node(value);
-        }
-        size++;
-    }
-    void pop() {
-        if (size > 1) head = head->next;
-            else if (size == 1) head = tail = NULL;
-        if(size > 0) size--;
-    }
-    int getSize() {
-        return size;
-    }
-    int isEmpty() {
-        return (size <= 0);
-    }
-    int front() {
-        try {
-            return head->value;
-        } catch( exception e) {
-            return NULL;
-        }
-    }
-    int back() {
-        try {
-            return tail->value;
-        } catch (exception e) {
-            return NULL;
-        }
-    }
-};
-
-
-int main() {
+int main()
+{
+    int n, m, a[50][50];
+    cin >> n >> m;
+    a[1][1]=1;
+    for (int i = 2; i <= n; i++)
+        for (int j = 2; j <= m; j++)
+        a[i][j]=a[i-1][j-2]+a[i-2][j-1];
+    cout << a[n][m];
     return 0;
 }
