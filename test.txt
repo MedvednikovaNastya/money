@@ -1,0 +1,7 @@
+Test 1.
+Enter: 3 2
+Answer: 1
+
+Test 2.
+Enter: 31 34
+Answer: 293930
