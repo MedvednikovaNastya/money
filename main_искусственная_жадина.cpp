@@ -2,8 +2,8 @@
 using namespace std;
 int main()
 {
-    int A[] = { 500, 200, 100, 50, 20, 10 };
-    int n, a, x;
+    long long A[] = { 500, 200, 100, 50, 20, 10 };
+    long long n, a, x;
     cin >> n ; 
     x=0;
     for(int i = 0; i < 6; ++i){
