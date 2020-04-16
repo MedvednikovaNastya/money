@@ -1,15 +1,17 @@
-#include <iostream>
-
+#include <iostream> 
 using namespace std;
-
 int main()
 {
-    int n, m, a[50][50];
-    cin >> n >> m;
-    a[1][1]=1;
-    for (int i = 2; i <= n; i++)
-        for (int j = 2; j <= m; j++)
-        a[i][j]=a[i-1][j-2]+a[i-2][j-1];
-    cout << a[n][m];
-    return 0;
+    int A[] = { 500, 200, 100, 50, 20, 10 };
+    int n, a, x;
+    cin >> n ; 
+    x=0;
+    for(int i = 0; i < 6; ++i){
+        a = A[i]; 
+        x += n / a;
+        n %= a;
+    }
+    if(n > 0) x = -1;
+        cout << x; 
+ return 0;
 }
