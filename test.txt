@@ -1,7 +1,8 @@
-Test 1.
-Enter: 3 2
-Answer: 1
+Input: 130
+Output: 3
 
-Test 2.
-Enter: 31 34
-Answer: 293930
+Input: 567
+Output: -1
+
+Input: 300
+Output: 2
