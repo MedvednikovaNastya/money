@@ -2,11 +2,10 @@
 using namespace std;
 int main()
 {
-    long long A[] = { 500, 200, 100, 50, 20, 10 };
-    long long n, a, x;
-    cin >> n ; 
+    long long A[] = {429, 357, 355, 289, 139, 101, 80, 79,61, 60, 59, 37, 36, 25, 23, 22, 10, 7, 6, 1};
+    long long n=100000, a, x;
     x=0;
-    for(int i = 0; i < 6; ++i){
+    for(int i = 0; i < 20; ++i){
         a = A[i]; 
         x += n / a;
         n %= a;
