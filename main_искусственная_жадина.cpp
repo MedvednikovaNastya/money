@@ -19,8 +19,7 @@ int main()
 #include <cstdio>
 #include <vector>
 #include <iostream>
- using namespace std;
-void decompose(std::vector<long long> m, long long l, long long r) {
+void a(std::vector<long long> m, long long l, long long r) {
     while (l <= r) {
         for (long long i = 0; i < (long long)m.size(); ++i) {
             std::cout << m[i] << "+";
@@ -28,7 +27,7 @@ void decompose(std::vector<long long> m, long long l, long long r) {
         std::cout << l << "+"<< r << endl;
         m.push_back(l);
         if (r - l >= l) {
-            decompose(m, l, r - l);
+            a(m, l, r - l);
         }
         m.pop_back();
         ++l;
@@ -40,5 +39,5 @@ int main() {
     long n;
     std::cin >> n;
     vector<long long> m;
-    decompose(m, 1, n - 1);
+    a(m, 1, n - 1);
 }
