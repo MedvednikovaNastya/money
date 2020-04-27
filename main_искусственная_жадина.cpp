@@ -15,3 +15,30 @@ int main()
  return 0;
 }
 // если элементы массива А расположены не по убыванию, то можно сделать сортировку а дальше - по алгоритму
+//1ая задача
+#include <cstdio>
+#include <vector>
+#include <iostream>
+ using namespace std;
+void decompose(std::vector<long long> m, long long l, long long r) {
+    while (l <= r) {
+        for (long long i = 0; i < (long long)m.size(); ++i) {
+            std::cout << m[i] << "+";
+        }
+        std::cout << l << "+"<< r << endl;
+        m.push_back(l);
+        if (r - l >= l) {
+            decompose(m, l, r - l);
+        }
+        m.pop_back();
+        ++l;
+        --r;
+    }
+}
+ 
+int main() {
+    long n;
+    std::cin >> n;
+    vector<long long> m;
+    decompose(m, 1, n - 1);
+}
